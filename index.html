@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="flex-wrap flex-vertical" ng-controller="menus">
+<div class="header flex-wrap">
+  <div class="logo"></div>
+  <ul class="menu flex-con">
+    <li ng-repeat="menu in menus" ng-class="{true:'active'}[menuIndex===$index]">
+      <a href="#{{menu.href}}" ng-click="toggleMenu($index)">{{menu.value}}</a>
+    </li>
+  </ul>
+  <div class="userinfo"></div>
+</div>
+  <div class="container flex-con flex-wrap">
+    <div class="sidebar">
+        <ul class="submenu">
+          <li ng-repeat="menu in submenus" ng-class="{true:'active'}[submenuIndex===$index]">
+            <a href="#{{menu.href}}" ng-click="toggleSubMenu($index)">{{menu.value}}</a>
+          </li>
+        </ul>
+    </div>
+    <div class="content flex-con"  ng-view>
+
+    </div>
+  </div>
+
+  <div class="footer" style="height:30px;">
+    Angular seed app: v<span app-version></span>
+  </div>
+
+  <script src="dist/bundle.js"></script>
+</body>
+</html>

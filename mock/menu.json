@@ -1,0 +1,20 @@
+[
+  {
+    "name":"home",
+    "href":"home",
+    "value":"首页",
+    "children":[
+      {"name":"login", "href":"login", "value":"登录"},
+      {"name":"logout", "href":"logout", "value":"登出"}
+    ]
+  },
+  {
+    "name":"setting",
+    "href":"setting",
+    "value":"设置",
+    "children":[
+      {"name":"user", "href":"user", "value":"用户"},
+      {"name":"log", "href":"log", "value":"日志"}
+    ]
+  }
+]

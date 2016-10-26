@@ -1,0 +1,74 @@
+/* app css stylesheet */
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+/********************************
+**  1、顶部导航栏样式
+*********************************/
+.header .logo{
+    width:260px;
+}
+.header .menu{
+    text-align: right;
+}
+.header .userinfo{
+    width:300px;
+}
+.menu {
+    list-style: none;
+    /*border-bottom: 0.1em solid black;*/
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+.menu > li {
+    display: inline;
+    padding:5px;
+}
+
+.menu > li + li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+.menu >li.active{
+    background:gray;
+}
+.menu >li.active a{
+    color:#fff;
+}
+/********************************
+**  2、侧边栏层叠样式
+*********************************/
+.sidebar{
+    background:#70c0d8;
+    width:260px;
+}
+.submenu{
+    list-style: none;
+}
+.submenu >li.active a{
+    color:#f36a6a;
+}
+/********************************
+**  3、中间内容区样式
+*********************************/
+.content{
+    background:#f2f2f2;
+    padding:5px;
+}
+/********************************
+**  4、底部footer样式
+*********************************/
+.footer{
+    background: #191818;
+    color: #fff;
+    text-align: center;
+}
+
+/********************************
+**  5、媒体查询
+*********************************/
+@media screen and (max-width: 1024px) {
+
+}
